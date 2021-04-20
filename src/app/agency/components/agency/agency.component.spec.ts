@@ -22,4 +22,16 @@ describe('AgencyComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should calculate ceiling value correctly', () => {
+    expect(component.getCelingValue(1.3))
+    .toEqual('1');
+  });
+
+  it('should calculate ceiling value correctly', () => {
+    spyOn(window, 'alert');
+    component.handleClick()
+    expect(window.alert).toHaveBeenCalledWith('Button clicked');
+  });
+
 });

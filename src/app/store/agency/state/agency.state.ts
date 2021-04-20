@@ -10,7 +10,7 @@ export class AgencyStateModel {
 }
 
 @State<AgencyStateModel>({
-    name: 'agencies',
+    name: 'items',
     defaults: {
         Agencies: null,
         Loading: false

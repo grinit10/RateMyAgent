@@ -12,7 +12,7 @@ export class AgenciesComponent implements OnInit {
 
   agencies: Agencies;
   constructor(private store: Store) {
-    this.store.select(state => state.agencies.Agencies).subscribe((r: Agencies) => {
+    this.store.select(state => state.items.Agencies).subscribe((r: Agencies) => {
       this.agencies = r;
     });
   }
