@@ -1,0 +1,37 @@
+.bold-font {
+  font-weight: bold;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 1px grey solid;
+}
+.image2 {
+  position: absolute;
+  top: 80px;
+  left: 180px;
+  width: 40px;
+  height: 40px;
+}
+
+.star-item  {
+  position: absolute;
+    top: 172px;
+    left: 53px;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: gray;
+    text-align: center;
+}
