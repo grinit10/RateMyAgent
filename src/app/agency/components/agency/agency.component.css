@@ -35,3 +35,7 @@ img {
     background-color: gray;
     text-align: center;
 }
+
+.mat-icon {
+  vertical-align: middle;
+}

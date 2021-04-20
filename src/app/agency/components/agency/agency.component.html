@@ -29,7 +29,10 @@
         </div>
         <div fxLayout="column" fxLayoutAlign="space-around center">
             <img src="./../../../../assets/money.png" alt="Sale price">
-            <h1 class="bold-font">{{getCelingValue(agency?.AverageSalePrice) + 'k'}}</h1>
+            <div fxLayout="row">
+                <sup class="bold-font">$</sup>
+                <h1 class="bold-font">{{getCelingValue(agency?.AverageSalePrice) + 'k'}}</h1>
+            </div>
             <div>Average sale price</div>
             <div>in <span class="bold-font">Melbourne</span></div>
         </div>
