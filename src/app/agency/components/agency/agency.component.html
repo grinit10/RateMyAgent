@@ -1,43 +1,48 @@
 <mat-card class="mat-elevation-z4">
-    <div fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="space-around center">
-        <div fxLayout='column'>
-            <div class="parent">
-                <img class="image1" src="./../../../../assets/avatar.png" alt="Avatar">
-                <img *ngIf='agency?.IsAwardWinner' class="image2" src="./../../../../assets/awards-badge.svg" alt="Awards">
-                <div *ngIf='agency?.StarRating > 2' class="star-item">
-
-                    <mat-icon>star</mat-icon>
-                    <span>{{agency?.StarRating}}</span>
+    <mat-card-header></mat-card-header>
+    <mat-card-content>
+        <br>
+        <div fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="space-around center">
+            <div fxLayout='column'>
+                <div class="parent">
+                    <img class="image1" src="./../../../../assets/avatar.png" alt="Avatar">
+                    <img *ngIf='agency?.IsAwardWinner' class="image2" src="./../../../../assets/awards-badge.svg" alt="Awards">
+                    <div *ngIf='agency?.StarRating > 2' class="star-item">
+    
+                        <mat-icon>star</mat-icon>
+                        <span>{{agency?.StarRating}}</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div fxLayout="column" fxLayoutAlign="space-around start">
-            <h1 class="bold-font">{{agency?.Name}}</h1>
-            <div>{{agency?.Agency?.Name}}</div>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="space-around center">
-            <img src="./../../../../assets/chat.png" alt="Chat">
-            <h1 class="bold-font">{{agency?.TotalReviews}}</h1>
-            <div>Reviews</div>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="space-around center">
-            <img src="./../../../../assets/gavel.png" alt="Sold">
-            <h1 class="bold-font">{{agency?.SoldProperties}}</h1>
-            <div>Sold properties</div>
-            <div>in <span class="bold-font">Melbourne</span></div>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="space-around center">
-            <img src="./../../../../assets/money.png" alt="Sale price">
-            <div fxLayout="row">
-                <sup class="bold-font">$</sup>
-                <h1 class="bold-font">{{getCelingValue(agency?.AverageSalePrice) + 'k'}}</h1>
+            
+            <div fxLayout="column" fxLayoutAlign="space-around start">
+                <h1 class="bold-font">{{agency?.Name}}</h1>
+                <div>{{agency?.Agency?.Name}}</div>
             </div>
-            <div>Average sale price</div>
-            <div>in <span class="bold-font">Melbourne</span></div>
+            <div fxLayout="column" fxLayoutAlign="space-around center">
+                <img src="./../../../../assets/chat.png" alt="Chat">
+                <h1 class="bold-font">{{agency?.TotalReviews}}</h1>
+                <div>Reviews</div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="space-around center">
+                <img src="./../../../../assets/gavel.png" alt="Sold">
+                <h1 class="bold-font">{{agency?.SoldProperties}}</h1>
+                <div>Sold properties</div>
+                <div>in <span class="bold-font">Melbourne</span></div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="space-around center">
+                <img src="./../../../../assets/money.png" alt="Sale price">
+                <div fxLayout="row">
+                    <sup class="bold-font">$</sup>
+                    <h1 class="bold-font">{{getCelingValue(agency?.AverageSalePrice) + 'k'}}</h1>
+                </div>
+                <div>Average sale price</div>
+                <div>in <span class="bold-font">Melbourne</span></div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="space-around center">
+                <button mat-raised-button color="primary" (click)='handleClick()'>Get in touch</button>
+            </div>
         </div>
-        <div fxLayout="column" fxLayoutAlign="space-around center">
-            <button mat-raised-button color="primary" (click)='handleClick()'>Get in touch</button>
-        </div>
-    </div>
+    </mat-card-content>
+    
 </mat-card>

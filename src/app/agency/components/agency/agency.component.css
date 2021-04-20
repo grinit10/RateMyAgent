@@ -39,3 +39,8 @@ img {
 .mat-icon {
   vertical-align: middle;
 }
+
+.mat-card-header {
+  height: 50px;
+  background-color: gray;
+}
